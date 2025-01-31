@@ -56,7 +56,7 @@ int main() {
 	resizeWindow(window, initWidth, initHeight);
 
 	// Initialise scene - geometry and shaders etc
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // setup background colour to be black
+	glClearColor(0.0f, 100.0f, 100.0f, 100.0f); // setup background colour to be black
 
 
 	//
@@ -90,6 +90,19 @@ void renderScene()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Render objects here...
+	glBegin(GL_TRIANGLES);
+    glVertex2f(0.5f, 0.5f);
+	glVertex2f(0.0f, -1.0f);
+	glVertex2f(-0.5f, 0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.0f, 1.0f);
+	glVertex2f(0.5f, -0.5f);
+
+	
+
+	glEnd();
+
 }
 
 
